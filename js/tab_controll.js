@@ -29,7 +29,7 @@ items.forEach(item => {
         }
         else if (item.classList.contains('info')) {
             home.style.display = 'none';
-            invoice.style.display = 'block';
+            invoice.style.display = 'none';
             info.style.display = 'block';
         }
     });
