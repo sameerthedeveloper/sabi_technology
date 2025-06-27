@@ -29,7 +29,7 @@
           <div class="p-2  w-[100%] mt-2 border-black bg-amber-300 border-1 rounded-xl shadow-md">
             <select
               class="bg-amber-300 w-full text-sm font-medium outline-none text-center "
-              id="series">
+              id="scrpixel">
               <option disabled>Select Screen Pixel</option>
               <!-- <option value="AS6">AS6 Series</option>
                             <option value="AS5" selected>AS5 Series</option> -->
@@ -45,9 +45,9 @@
           <h1 class="font-bold">Client Size</h1>
           <div class="w-[100%] flex justify-between">
             <input type="text" class="border-1 w-[50%] p-2 m-1 border-black bg-amber-300 rounded-xl shadow-md"
-              placeholder="Width" inputmode="numeric">
+              placeholder="Width" inputmode="numeric" id="cswidth">
             <input type="text" class="border-1 w-[50%] p-2 m-1 border-black bg-amber-300  rounded-xl shadow-md"
-              placeholder="Height" inputmode="numeric">
+              placeholder="Height" inputmode="numeric" id="csheight">
 
           </div>
         </div>
@@ -58,9 +58,9 @@
           <h1 class="font-bold">Module</h1>
           <div class="w-[100%] flex justify-between">
             <input type="text" class="border-1 w-[50%] p-2 m-1 border-black bg-amber-300 rounded-xl shadow-md"
-              placeholder="Width" inputmode="numeric">
+              placeholder="Width" inputmode="numeric" id="modwidth">
             <input type="text" class="border-1 w-[50%] p-2 m-1 border-black bg-amber-300  rounded-xl shadow-md"
-              placeholder="Height" inputmode="numeric">
+              placeholder="Height" inputmode="numeric" id="modheight">
 
           </div>
         </div>
@@ -70,37 +70,50 @@
         <div>
           <h1 class="font-bold text-center">Module Matrix</h1>
           <div class="w-[100%] flex justify-between">
-            <p class="border-1 w-[50%] p-2 m-1 border-black bg-amber-200 rounded-xl shadow-md text-center">-</p>
-            <p type="text"
-              class="border-1 w-[50%] p-2 m-1 border-black bg-amber-200  rounded-xl shadow-md text-center">-</p>
+            <div class="border-1 w-[50%] p-1 m-1 border-black bg-amber-200 rounded-xl shadow-md text-center">
+              <p class="font-bold text-xs m-1">Width</p>
+              <p id="modmat_w">-</p>
+            </div>
+            <div class="border-1 w-[50%] p-1 m-1 border-black bg-amber-200  rounded-xl shadow-md text-center">
+               <p class="font-bold text-xs m-1">Height</p>
+              <p id="modmat_h">-</p>
+            </div>
 
           </div>
         </div>
         <div class="mt-3">
           <h1 class="font-bold text-center">Screen Size (mm)</h1>
           <div class="w-[100%] flex justify-between">
-            <p class="border-1 w-[50%] p-2 m-1 border-black bg-amber-200 rounded-xl shadow-md text-center">-</p>
-            <p type="text"
-              class="border-1 w-[50%] p-2 m-1 border-black bg-amber-200  rounded-xl shadow-md text-center">-</p>
-
-          </div>
+            <div class="border-1 w-[50%] p-1 m-1 border-black bg-amber-200 rounded-xl shadow-md text-center">
+              <p class="font-bold text-xs m-1">Width</p>
+              <p id="scrsize_mm_w">-</p>
+            </div>
+            <div class="border-1 w-[50%] p-1 m-1 border-black bg-amber-200 rounded-xl shadow-md text-center">
+              <p class="font-bold text-xs m-1">Height</p>
+              <p id="scrsize_mm_h">-</p>
+            </div>
         </div>
         <div class="mt-3">
           <h1 class="font-bold text-center">Screen Size (ft)</h1>
           <div class="w-[100%] flex justify-between">
-            <p class="border-1 w-[50%] p-2 m-1 border-black bg-amber-200 rounded-xl shadow-md text-center">-</p>
-            <p type="text"
-              class="border-1 w-[50%] p-2 m-1 border-black bg-amber-200  rounded-xl shadow-md text-center">-</p>
-
+            <div class="border-1 w-[50%] p-1 m-1 border-black bg-amber-200 rounded-xl shadow-md text-center">
+              <p class="font-bold text-xs m-1">Width</p>
+              <p id="scrsize_ft_w">-</p>
+            </div>
+            <div class="border-1 w-[50%] p-1 m-1 border-black bg-amber-200 rounded-xl shadow-md text-center">
+              <p class="font-bold text-xs m-1">Height</p>
+              <p id="scrsize_ft_h">-</p>
+            </div>
           </div>
         </div>
+      </div>
       </div>
 
       <div class="m-5 p-5 bg-white border-1 border-gray-200 rounded-xl shadow-lg ">
         <div>
           <h1 class="font-bold">Total Sqft</h1>
           <div class="w-[100%] flex justify-between">
-            <p class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-200 rounded-xl shadow-md text-center">-
+            <p id="totSqft" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-200 rounded-xl shadow-md text-center">-
             </p>
 
 
@@ -112,7 +125,7 @@
         <div>
           <h1 class="font-bold">Cost Per Sqft</h1>
              <div class="w-[100%] flex justify-between">
-            <p class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-200 rounded-xl shadow-md text-center">-
+            <p id="contpersqft" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-200 rounded-xl shadow-md text-center">-
             </p>
 
 
@@ -128,13 +141,13 @@
           <div>
             <div class="border-1 w-[100%] p-1 mt-2 border-black bg-amber-200 rounded-xl shadow-md text-center font-bold">
               <p>Quantity</p>
-              <p>-</p>
+              <p id="modqty">-</p>
             </div>
-            <input type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Spare">
-            <input type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Unit Price">
+            <input id="modspare" type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Spare">
+            <input id="moduprice" type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Unit Price">
             <div class="border-1 w-[100%] p-1 mt-2 border-black bg-amber-200 rounded-xl shadow-lg text-center font-bold">
               <p>Total Amount</p>
-              <p>-</p>
+              <p id="modtotamt">-</p>
             </div>
           </div>
           </div>
@@ -144,13 +157,13 @@
           <div>
             <div class="border-1 w-[100%] p-1 mt-2 border-black bg-amber-200 rounded-xl shadow-md text-center font bold">
               <p>Quantity</p>
-              <p>-</p>
+              <p id="smpsqty">-</p>
             </div>
-            <input type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Spare">
-            <input type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Unit Price">
+            <input id="smpsspare" type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Spare">
+            <input id="smpsuprice" type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Unit Price">
             <div class="border-1 w-[100%] p-1 mt-2 border-black bg-amber-200 rounded-xl shadow-lg text-center font-bold">
               <p>Total Amount</p>
-              <p>-</p>
+              <p id="smpstotamt">-</p>
 
             </div>
           </div>
@@ -158,11 +171,11 @@
         <div class="mt-3">
           <h1 class="font-bold">Rx</h1>
           <div>
-            <input type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Quantity">
-            <input type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Unit Price">
+            <input id="rxqty" type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Quantity">
+            <input id="rxuprice" type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Unit Price">
             <div class="border-1 w-[100%] p-1 mt-2 border-black bg-amber-200 rounded-xl shadow-lg text-center font-bold">
               <p>Total Amount</p>
-              <p>-</p>
+              <p id="rxtotamt">-</p>
 
             </div>
           </div>
@@ -170,9 +183,9 @@
         <div class="mt-3">
           <h1 class="font-bold">Tx</h1>
           <div>
-            <input type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Quantity">
-            <input type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Unit Price">
-            <div class="border-1 w-[100%] p-1 mt-2 border-black bg-amber-200 rounded-xl shadow-lg text-center font-bold">
+            <input id="txqty" type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Quantity">
+            <input id="txuprice" type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Unit Price">
+            <div id="txtotamt" class="border-1 w-[100%] p-1 mt-2 border-black bg-amber-200 rounded-xl shadow-lg text-center font-bold">
               <p>Total Amount</p>
               <p>-</p>
 
@@ -182,11 +195,11 @@
         <div class="mt-3">
           <h1 class="font-bold">Cable</h1>
           <div>
-            <input type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Quantity">
-            <input type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Unit Price">
+            <input id="cableqty" type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Quantity">
+            <input id="cableuprice" type="text" inputmode="numeric" class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-300 shadow-md text-center rounded-xl" placeholder="Unit Price">
             <div class="border-1 w-[100%] p-1 mt-2 border-black bg-amber-200 rounded-xl shadow-lg text-center font-bold">
               <p>Total Amount</p>
-              <p>-</p>
+              <p id="cabletotamt">-</p>
 
             </div>
           </div>
@@ -195,12 +208,12 @@
 
       <div class="m-5 p-5 bg-white border-1 border-gray-200 rounded-xl shadow-lg">
         <h1 class="font-bold">Total Amount</h1>
-        <p type="text" inputmode="numeric"
+        <p id="totamt"
           class="border-1 w-[100%] p-2 mt-2 border-black bg-amber-200 shadow-md text-center rounded-xl"
           >-</p>
       </div>
       <div class="mb-20"></div>
-    </div>
+    
     <div class="info overflow-scroll w-[100%]">
       <h1>Info</h1>
     </div>
