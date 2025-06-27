@@ -3,6 +3,10 @@ const home = document.querySelector('.home');
 const invoice = document.querySelector('.quta');
 const info = document.querySelector('.info');
 
+invoice.style.display = 'none';
+info.style.display = 'none';
+
+
 
 // invoice.style.display = 'none';
 
